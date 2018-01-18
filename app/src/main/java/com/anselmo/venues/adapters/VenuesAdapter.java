@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.anselmo.venues.R;
 import com.anselmo.venues.models.Venue;
@@ -62,6 +63,13 @@ public class VenuesAdapter extends RecyclerView.Adapter<VenuesAdapter.VenuesHold
         } else {
             holder.postalCode.setText("No disponible");
         }
+
+        holder.favorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "Hola", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
