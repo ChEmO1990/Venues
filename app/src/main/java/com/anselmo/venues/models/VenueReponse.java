@@ -4,38 +4,38 @@ package com.anselmo.venues.models;
 import java.util.List;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.os.Parcelable.Creator;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class VenusReponse implements Parcelable
+public class VenueReponse implements Parcelable
 {
 
     @SerializedName("venues")
     @Expose
     private List<Venue> venues = null;
-    public final static Creator<VenusReponse> CREATOR = new Creator<VenusReponse>() {
+    public final static Creator<VenueReponse> CREATOR = new Creator<VenueReponse>() {
 
 
         @SuppressWarnings({
             "unchecked"
         })
-        public VenusReponse createFromParcel(Parcel in) {
-            return new VenusReponse(in);
+        public VenueReponse createFromParcel(Parcel in) {
+            return new VenueReponse(in);
         }
 
-        public VenusReponse[] newArray(int size) {
-            return (new VenusReponse[size]);
+        public VenueReponse[] newArray(int size) {
+            return (new VenueReponse[size]);
         }
 
     }
     ;
 
-    protected VenusReponse(Parcel in) {
+    protected VenueReponse(Parcel in) {
         in.readList(this.venues, (com.anselmo.venues.models.Venue.class.getClassLoader()));
     }
 
-    public VenusReponse() {
+    public VenueReponse() {
     }
 
     public List<Venue> getVenues() {
@@ -48,7 +48,7 @@ public class VenusReponse implements Parcelable
 
     @Override
     public String toString() {
-        return "VenusReponse{" +
+        return "VenueReponse{" +
                 "venues=" + venues +
                 '}';
     }
